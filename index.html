@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expression App - Login</title>
+    <title>Face Authentication - Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Login</h2>
-        <input type="email" id="login-email" placeholder="Email">
-        <input type="password" id="login-password" placeholder="Password">
-        <button onclick="login()">Login</button>
-        <button onclick="googleLogin()">Login with Google</button>
+    <div class="login-container">
+        <h2>Face authentication</h2>
+        <input type="email" id="login-email" placeholder="Enter Email">
+        <input type="password" id="login-password" placeholder="Enter Password">
+        <button class="login-btn" onclick="login()">Login</button>
+        <button class="google-btn" onclick="googleLogin()">Login with Google</button>
         <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
     </div>
     <script src="firebase.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
