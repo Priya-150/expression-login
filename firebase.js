@@ -9,13 +9,3 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-function googleLogin() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider)
-        .then(() => window.location.href = "dashboard.html")
-        .catch(error => alert(error.message));
-}
-
-function googleSignup() {
-    googleLogin();
-}
