@@ -6,16 +6,10 @@ function login() {
         .catch(error => alert(error.message));
 }
 
-function signup() {
-    const email = document.getElementById("signup-email").value;
-    const password = document.getElementById("signup-password").value;
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+function googleLogin() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
         .then(() => window.location.href = "dashboard.html")
         .catch(error => alert(error.message));
 }
 
-function logout() {
-    firebase.auth().signOut()
-        .then(() => window.location.href = "logout.html")
-        .catch(error => alert(error.message));
-}
